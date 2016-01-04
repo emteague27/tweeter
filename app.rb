@@ -29,4 +29,3 @@ get '/following' do
 	erb :following
 end
 
-
