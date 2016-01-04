@@ -28,3 +28,19 @@ end
 get '/following' do
 	erb :following
 end
+
+post '/sign-in' do
+	@user = User.where(username: params[:username]).last
+	if @user && @user.password == params[:password]
+		session[:user_id] = @user.id
+		flash[:notice] = "You have signed in"
+		redirect '/home'
+	else
+		flash[:notice] = "I thought I thaw a puddytat"
+		redirect '/'
+	end
+end
+
+post '/sign-up' do
+
+end
