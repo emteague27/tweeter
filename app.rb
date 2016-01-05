@@ -57,8 +57,15 @@ post '/sign-up' do
 	redirect '/home'
 end
 
+post '/new-post' do
+      
+end
+
 def current_user
 	if session[:user_id]
 		@current_user = User.find(session[:user_id])
 	end
 end
+
+
+
