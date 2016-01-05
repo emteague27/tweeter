@@ -1,17 +1,19 @@
 <h1>Edit Your Information Below</h1>
 
-<form method="POST" action="/sign-up">
+<form method="POST" action="/edit_account">
 	<label for="fname">First Name</label>
-	<input type="text" name="firstname" placeholder=params[:fname]>
+	<input type="text" name="fname" value=<%= @user.fname %>>
 	<label for="lname">Last Name</label>
-	<input type="text" name="lastname">
+	<input type="text" name="lname" value=<%= @user.lname %>>
 	<label for="username">Username</label>
-	<input type="text" name="username">
+	<input type="text" name="username" value=<%= @user.username %>>
 	<label for="password">Password</label>
-	<input type="password" name="password">
+	<input type="password" name="password"
+	value=<%= @user.password %>>
 	<label for="email">Email</label>
-	<input type="email" name="email">
+	<input type="email" name="email"
+	value=<%= @user.email %>>
 	<label for="birthdate">Birthdate</label>
-	<input type="text" name="birthdate">
+	<input type="text" name="birthdate" value=<%= @user.birthdate %>>
 	<input type="submit">
 </form>
