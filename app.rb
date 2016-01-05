@@ -75,3 +75,13 @@ def current_user
 		@current_user = User.find(session[:user_id])
 	end
 end
+
+post '/new-post' do
+
+end
+
+post '/delete' do
+	@user = current_user
+	@user.delete
+	redirect '/'
+end
