@@ -65,7 +65,8 @@ post '/sign-up' do
 end
 
 post '/edit_account' do
-	@current_user.
+	@user = current_user
+	@user.update(fname: params[:fname], lname: params[:lname], username: params[:username], password: params[:password], email: params[:email], birthdate: params[:birthdate])
 	redirect '/account'
 end
 
