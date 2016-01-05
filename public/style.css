@@ -112,9 +112,8 @@
 
 
 /*new_post page*/
-h2{
-	/*display: block;*/
 
+h2{
 	margin: 20px;
 	font-size: 30px;
 }
@@ -141,26 +140,5 @@ input.title{
 	margin-bottom: 8px;
 	width: 400px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*new_post page*/
