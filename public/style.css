@@ -1,0 +1,36 @@
+/*sign-in/up page*/
+
+
+/*user_home page*/
+#feed_box{
+	width: 700px;
+	height: 500px;
+	border: 1px solid black;
+	float: left;
+	margin-top: -308px;
+	margin-left: 400px;
+}
+#profile_photo{
+	width: 200px;
+	height: 250px;
+	border: 1px solid black;
+	margin-bottom: 20px;
+}
+#right_column{
+	margin-left: 50px;
+}
+
+.link_box{
+	display: block;
+}
+
+/*profile page*/
+
+
+/*following page*/
+
+
+/*account page*/
+
+
+/*new_post page*/
