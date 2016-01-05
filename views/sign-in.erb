@@ -1,4 +1,4 @@
-<h1>Please sign in or sign up below.</h1>
+<h1 id="sign_in_header">Please sign in or sign up below.</h1>
 
 <form method="POST" action="/sign-in">
 	<label for="username">Username</label>
@@ -23,5 +23,14 @@
 	<input type="text" name="birthdate">
 	<input type="submit">
 </form>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+<% if flash[:notice] %>
+		<div class="flash_notice">
+			<%= flash[:notice] %>
+		</div>
+	<% end %>
 
 

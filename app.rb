@@ -53,7 +53,7 @@ post '/sign-in' do
 		flash[:notice] = "You have signed in"
 		redirect '/home'
 	else
-		flash[:notice] = "I tawt I taw a puddy tat"
+		flash[:notice] = "\"I thawt I taw a puddy tat!\" Sylvester says your username or password is incorrect."
 		redirect '/'
 	end
 end
