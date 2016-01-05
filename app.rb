@@ -32,6 +32,14 @@ get '/following' do
 	erb :following
 end
 
+get '/edit_account' do
+	erb :'edit-account'
+end
+
+get '/delete' do
+	erb :'delete-account'
+end
+
 post '/sign-in' do
 	@user = User.where(username: params[:username]).last
 	if @user && @user.password == params[:password]
