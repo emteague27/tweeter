@@ -47,7 +47,7 @@ post '/sign-in' do
 		flash[:notice] = "You have signed in"
 		redirect '/home'
 	else
-		flash[:notice] = "I thought I thaw a puddytat"
+		flash[:notice] = "I tawt I taw a puddy tat"
 		redirect '/'
 	end
 end
