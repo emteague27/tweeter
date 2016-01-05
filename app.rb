@@ -76,8 +76,10 @@ def current_user
 	end
 end
 
-post '/new-post' do
-
+post '/twit' do
+	@post = Post.new(title: params[:title], body: params[:text])
+	@post.save
+	redirect '/home'
 end
 
 post '/delete' do
