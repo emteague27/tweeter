@@ -42,6 +42,7 @@ post '/sign-in' do
 end
 
 post '/sign-up' do
-
+	@user = User.create(fname: params[:fname], lname: params[:lname], username: params[:username], password: params[:password], email: params[:email], birthdate: params[:birthdate])
+	redirect '/home'
 end
 
