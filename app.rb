@@ -33,11 +33,17 @@ get '/following' do
 end
 
 get '/edit_account' do
+	@user = current_user
 	erb :'edit-account'
 end
 
 get '/delete' do
 	erb :'delete-account'
+end
+
+get '/logout' do
+	session.clear
+	redirect '/'
 end
 
 post '/sign-in' do
@@ -54,7 +60,13 @@ end
 
 post '/sign-up' do
 	@user = User.create(fname: params[:fname], lname: params[:lname], username: params[:username], password: params[:password], email: params[:email], birthdate: params[:birthdate])
+	session[:user_id] = @user.id
 	redirect '/home'
+end
+
+post '/edit_account' do
+	@current_user.
+	redirect '/account'
 end
 
 def current_user
