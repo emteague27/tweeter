@@ -1,14 +1,19 @@
 /*sign-in/up page*/
-
-
-
-
-
-
-
-
-
-
+body{
+	background-color: #B5F3F4;
+}
+#sign_in_header{
+	color: #3E5AF9;
+	text-shadow: 1px 1px white,
+		1px -1px white,
+		-1px 1px white,
+		-1px -1px white;
+	font-family: Lobster, sans-serif;
+	font-size: 40px;
+}
+input, textarea{
+	border-radius: 0.5em 0.5em;
+}
 
 
 
@@ -27,14 +32,26 @@
 	height: 500px;
 	border: 1px solid black;
 	float: left;
-	margin-top: -308px;
+	margin-top: -390px;
 	margin-left: 400px;
+	background-color: rgba(255,255,255,0.8);
+}
+#home{
+	color: #3E5AF9;
+	text-shadow: 1px 1px white,
+		1px -1px white,
+		-1px 1px white,
+		-1px -1px white;
+	font-family: Lobster, sans-serif;
+	font-size: 40px;
 }
 #profile_photo{
-	width: 200px;
-	height: 250px;
+	width: 220px;
+	height: 315px;
 	border: 1px solid black;
 	margin-bottom: 20px;
+	background-color: white;
+	padding-left: 20px;
 }
 #right_column{
 	margin-left: 50px;
