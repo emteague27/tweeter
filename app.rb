@@ -79,3 +79,9 @@ end
 post '/new-post' do
 
 end
+
+post '/delete' do
+	@user = current_user
+	@user.delete
+	redirect '/'
+end
