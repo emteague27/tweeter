@@ -8,7 +8,7 @@ set :database, "sqlite3:tweeterdb.sqlite3"
 enable :sessions
 
 get '/' do 
-	erb :'sign-in'
+	erb :'sign-in', :layout => false
 end
 
 get '/home' do
@@ -83,5 +83,6 @@ end
 post '/delete' do
 	@user = current_user
 	@user.delete
+	session.clear
 	redirect '/'
 end
