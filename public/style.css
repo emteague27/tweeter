@@ -111,8 +111,36 @@
 /*account page*/
 
 
+/*new_post page*/
+h2{
+	/*display: block;*/
 
+	margin: 20px;
+	font-size: 30px;
+}
 
+#post{
+	margin: 22px;
+	width: 300px;
+}
+
+.title{
+	margin-bottom: 10px;
+	margin-top: 7px;
+	padding: 0.2em 12.3em;
+
+}
+
+input.title{
+	padding: 5px;
+	width: 400px;
+}
+
+.twitText{
+	height: 250px;
+	margin-bottom: 8px;
+	width: 400px;
+}
 
 
 
