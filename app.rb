@@ -5,11 +5,14 @@ require "./models.rb"
 
 set :database, "sqlite3:tweeterdb.sqlite3"
 
+enable :sessions
+
 get '/' do 
 	erb :'sign-in'
 end
 
 get '/home' do
+	@user = current_user
 	erb :home
 end
 
@@ -46,3 +49,8 @@ post '/sign-up' do
 	redirect '/home'
 end
 
+def current_user
+	if session[:user_id]
+		@current_user = User.find(session[:user_id])
+	end
+end

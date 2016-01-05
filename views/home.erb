@@ -1,3 +1,15 @@
-<h1>this is home</h1>
-<div id="profile_photo">
-<img src="">
+<h1>Welcome, <%= @user.fname %>!</h1>
+
+<div id="right_column">
+	<div id="profile_photo">
+		<img src="">
+	</div>
+	<div id="link_box">
+		<a href="/account" class="link_box">Account Settings</a>
+		<a href="/following" class="link_box">Following</a>	
+	</div>
+</div>
+
+<div id="feed_box">
+	<h4>This is where the feed will go.</h4>
+</div>
