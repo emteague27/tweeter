@@ -32,6 +32,7 @@ get '/new-post' do
 end
 
 get '/following' do
+	@user = 
 	erb :following
 end
 
