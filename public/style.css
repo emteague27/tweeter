@@ -39,20 +39,33 @@ label, input{
 #feed_box{
 	width: 700px;
 	height: 500px;
-	border: 1px solid black;
+	border: 1px solid lightgrey;
+	border-radius: 1em 1em; 
 	float: left;
-	margin-top: -390px;
-	margin-left: 400px;
 	background-color: rgba(255,255,255,0.8);
 	overflow: scroll;
 }
 #userposts{
-	border: 1px solid black;
 	margin-top: 10px;
-	margin-bottom: 10px;
+	border: 1px solid black;
+	border-radius: 1em 1em;
 	padding-left: 10px;
-	background-color: lightblue;
+	background-color: #2980D1;
 	font-family: Georgia;
+	width: 95%;
+	margin: 0 auto;
+}
+h3{
+	color: white;
+}
+#live_feed{
+	color: #2980D1;
+	text-shadow: 1px 1px white,
+		1px -1px white,
+		-1px 1px white,
+		-1px -1px white;
+	font-family: Lobster, sans-serif;
+	font-size: 30px;	
 }
 #home{
 	color: #3E5AF9;
@@ -73,6 +86,15 @@ label, input{
 }
 #right_column{
 	margin-left: 50px;
+	width: 50%;
+}
+
+#left_column{
+	float: right;
+	width: 50%;
+	top: 10%;
+	left: 38%;
+	position: fixed;
 }
 
 .link_box{
