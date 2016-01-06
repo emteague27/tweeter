@@ -54,8 +54,8 @@ post '/sign-in' do
 		flash[:notice] = "You have signed in"
 		redirect '/home'
 	else
-		flash[:notice] = "\"I thawt I taw a puddy tat!\" Sylvester says your username or password is incorrect."
-		redirect '/'
+		# flash[:notice] = "\"I thawt I taw a puddy tat!\" Sylvester says your username or password is incorrect."
+		redirect '/error'
 	end
 end
 
@@ -88,4 +88,8 @@ post '/delete' do
 	@user.delete
 	session.clear
 	redirect '/'
+end
+
+get '/error' do
+	erb :'error'
 end
