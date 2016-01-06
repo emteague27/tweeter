@@ -13,13 +13,12 @@ end
 
 get '/home' do
 	@user = current_user
-	@post = Post.all
+	@post = Post.all.reverse
 	erb :home
 end
 
 get '/profile/:id' do
 	erb :profile
-	@post = Post.all
 end
 
 get '/account' do
@@ -79,7 +78,7 @@ def current_user
 end
 
 post '/twit' do
-	@post = Post.new(title: params[:title], body: params[:text])
+	@post = Post.new(title: params[:title], body: params[:text], username: current_user.username)
 	@post.save
 	redirect '/home'
 end
