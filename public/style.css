@@ -60,8 +60,24 @@ input, textarea{
 .link_box{
 	display: block;
 }
-
-
+nav{
+	width: 100%;
+	text-align: center;
+	padding-top: 10px;
+}
+.navbar{
+	text-decoration: none;
+}
+.navlist{
+	list-style-type: none;
+	display: inline;
+	padding: 5px 15px 5px 0px;
+}
+a{
+	text-decoration: none;
+	font-family: Roboto, sans-serif;
+	font-size: 20px;
+}
 
 
 
