@@ -18,6 +18,8 @@ get '/home' do
 end
 
 get '/profile/:id' do
+	@user = current_user
+	@posts = Post.all.reverse
 	erb :profile
 end
 
