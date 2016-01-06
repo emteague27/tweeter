@@ -12,7 +12,8 @@
 </div>
 
 <div id="feed_box">
-	<ul id="twit_feed">
-		<li>This is where I will call in the last 10 posts </li>
-	</ul>
+	<% @post.each do |post| %>
+		<h4>Title: <i><%= post.title %></i></h4>
+		<h4>Body: <i><%= post.body %></i></h4>
+	<% end %>
 </div>
