@@ -78,8 +78,8 @@ def current_user
 end
 
 post '/twit' do
-	@post = Post.new(title: params[:title], body: params[:text], user_id: current_user.id)
-	@post.save
+	@posts = Post.new(title: params[:title], body: params[:text], user_id: current_user.id)
+	@posts.save
 	redirect '/home'
 end
 
