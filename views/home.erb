@@ -16,9 +16,9 @@
 		<% @posts.each do |post| %>
 			<div id="userposts">
 				<h3 id="username"><%= post.user.username %></h3>
-				<h4>Title: <i><%= post.title %></i></h4>
-				<h4><i><%= post.body %></i></h4>
-				<%= post.created_at %>
+				<h4 class="twit"><%= post.title %></h4>
+				<h4 class="twit"><i><%= post.body %></i></h4>
+				<h5 id="date"><%= post.created_at %></h5>
 			</div>
 			<br>
 		<% end %>

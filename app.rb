@@ -13,7 +13,7 @@ end
 
 get '/home' do
 	@user = current_user
-	@posts = Post.all.reverse
+	@posts = Post.last(10).reverse
 	erb :home
 end
 
@@ -82,7 +82,9 @@ end
 
 post '/twit' do
 	@posts = Post.new(title: params[:title], body: params[:text], user_id: current_user.id)
-	@posts.save
+	if !@posts.save
+		flash[:notice] = "Your Twit is too long. Please limit your opinions to 150 characters or less."
+	end
 	redirect '/home'
 end
 
@@ -96,3 +98,5 @@ end
 get '/error' do
 	erb :'error'
 end
+
+$posts_per_page = 10
