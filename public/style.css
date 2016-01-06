@@ -44,6 +44,15 @@ label, input{
 	margin-top: -390px;
 	margin-left: 400px;
 	background-color: rgba(255,255,255,0.8);
+	overflow: scroll;
+}
+#userposts{
+	border: 1px solid black;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	background-color: lightblue;
+	font-family: Georgia;
 }
 #home{
 	color: #3E5AF9;
