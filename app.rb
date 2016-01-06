@@ -13,11 +13,13 @@ end
 
 get '/home' do
 	@user = current_user
+	@post = Post.all
 	erb :home
 end
 
 get '/profile/:id' do
 	erb :profile
+	@post = Post.all
 end
 
 get '/account' do
