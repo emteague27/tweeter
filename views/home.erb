@@ -12,9 +12,9 @@
 </div>
 
 <div id="feed_box">
-	<% @post.each do |post| %>
+	<% @posts.each do |post| %>
 		<div id="userposts">
-			<h3><%= post.username %></h3>
+			<%= post.user.username %>
 			<h4>Title: <i><%= post.title %></i></h4>
 			<h4>Body: <i><%= post.body %></i></h4>
 			<%= post.created_at %>
