@@ -1,0 +1,228 @@
+/*sign-in/up page*/
+body{
+	background-color: #B5F3F4;
+}
+.sign_in_header{
+	color: #3FA2FF;
+	text-shadow: 1px 1px white,
+		1px -1px white,
+		-1px 1px white,
+		-1px -1px white;
+	font-family: Lobster, sans-serif;
+	font-size: 30px;
+}
+input, textarea{
+	border-radius: 0.5em 0.5em;
+}
+#site_name {
+	color: #3E5AF9;
+	text-shadow: 1px 1px white,
+		1px -1px white,
+		-1px 1px white,
+		-1px -1px white;
+	font-family: Lobster, sans-serif;
+	font-size: 60px;
+}
+label, input{
+	font-family: Roboto, sans-serif;
+}
+#sign_up{
+	display: block;
+}
+.flash_notice{
+	width: 20%;
+	background-color: #ff3300;
+	color: white;
+}
+
+
+
+/*user_home page*/
+#feed_box{
+	width: 700px;
+	height: 500px;
+	border: 1px solid lightgrey;
+	border-radius: 1em 1em; 
+	float: left;
+	background-color: rgba(255,255,255,0.8);
+	overflow: scroll;
+}
+#userposts{
+	margin-top: 10px;
+	border: 1px solid black;
+	border-radius: 1em 1em;
+	padding-left: 10px;
+	background-color: #2980D1;
+	width: 95%;
+	margin: 0 auto;
+}
+.twit{
+	color: white;
+	padding-left: 25px;
+	font-size: 18px;
+}
+#username{
+	color: white;
+	font-size: 25px;
+	text-shadow: 1px 1px darkslategrey;
+}
+#date{
+	color: darkslategrey;
+}
+#live_feed{
+	color: #2980D1;
+	text-shadow: 1px 1px white,
+		1px -1px white,
+		-1px 1px white,
+		-1px -1px white;
+	font-family: Lobster, sans-serif;
+	font-size: 30px;	
+}
+#home{
+	color: #3E5AF9;
+	text-shadow: 1px 1px white,
+		1px -1px white,
+		-1px 1px white,
+		-1px -1px white;
+	font-family: Lobster, sans-serif;
+	font-size: 40px;
+}
+#profile_photo{
+	width: 220px;
+	height: 315px;
+	border: 1px solid black;
+	margin-bottom: 20px;
+	background-color: white;
+	padding-left: 20px;
+}
+#right_column{
+	margin-left: 50px;
+	width: 50%;
+}
+
+#left_column{
+	float: right;
+	width: 50%;
+	top: 10%;
+	left: 38%;
+	position: fixed;
+}
+
+.link_box{
+	display: block;
+}
+nav{
+	width: 100%;
+	text-align: center;
+	padding-top: 10px;
+}
+.navbar{
+	text-decoration: none;
+}
+.navlist{
+	list-style-type: none;
+	display: inline;
+	padding: 5px 15px 5px 0px;
+}
+a{
+	text-decoration: none;
+	font-family: Roboto, sans-serif;
+	font-size: 20px;
+}
+
+
+
+
+
+
+/*profile page*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*following page*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*account page*/
+
+
+/*new_post page*/
+
+h2{
+	margin: 20px;
+	font-size: 30px;
+}
+
+#post{
+	margin: 22px;
+	width: 300px;
+}
+
+.title{
+	margin-bottom: 10px;
+	margin-top: 7px;
+	padding: 0.2em 12.3em;
+
+}
+
+input.title{
+	padding: 5px;
+	width: 400px;
+}
+
+.twitText{
+	height: 250px;
+	margin-bottom: 8px;
+	width: 400px;
+}
+
+/*new_post page*/

@@ -1,0 +1,10 @@
+$(document).ready(function(){
+	$(".sly").hide();
+	$(".params").hide();
+	$(".param3").hide();
+		$(".bird").fadeOut(3200);
+		$(".param").fadeOut(3300);
+			$(".sly").fadeIn(3400);
+			$(".params").fadeIn(3400);
+			$(".param3").fadeIn(3400);
+});

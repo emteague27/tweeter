@@ -13,13 +13,15 @@ end
 
 get '/home' do
 	@user = current_user
-	@posts = Post.all.reverse
+
+	@posts = Post.last(10).reverse
 	erb :home
 end
 
 get '/profile/:id' do
 	@user = current_user
 	@posts = Post.where(user_id: @user.id)
+
 	erb :profile
 end
 
@@ -32,6 +34,7 @@ get '/new-post' do
 end
 
 get '/following' do
+	@user = 
 	erb :following
 end
 
@@ -95,3 +98,30 @@ end
 get '/error' do
 	erb :'error'
 end
+
+def current_user
+	if session[:user_id]
+		@current_user = User.find(session[:user_id])
+	end
+end
+
+post '/twit' do
+	@posts = Post.new(title: params[:title], body: params[:text], user_id: current_user.id)
+	if !@posts.save
+		flash[:notice] = "Your Twit is too long. Please limit your opinions to 150 characters or less."
+	end
+	redirect '/home'
+end
+
+post '/delete' do
+	@user = current_user
+	@user.delete
+	session.clear
+	redirect '/'
+end
+
+get '/error' do
+	erb :'error'
+end
+
+$posts_per_page = 10
