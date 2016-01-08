@@ -19,6 +19,7 @@ end
 
 get '/profile/:id' do
 	@user = current_user
+	@posts = Post.where(user_id: @user.id)
 	@posts = Post.all.reverse
 	erb :profile
 end
@@ -32,7 +33,7 @@ get '/new-post' do
 end
 
 get '/following' do
-	@user = 
+	@user = current_user
 	erb :following
 end
 
