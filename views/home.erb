@@ -3,6 +3,7 @@
 <div id="right_column">
 	<div id="profile_photo">
 		<img src="images/default-profile-pic.png" width="200" height="300">
+
 	</div>
 	<div id="link_box">
 		<a href="/account" class="link_box">Account Settings</a>
@@ -16,6 +17,9 @@
 		<% @posts.each do |post| %>
 			<div id="userposts">
 				<h3 id="username"><%= post.user.username %></h3>
+				<h4>Title: <i><%= post.title %></i></h4>
+				<h4>Body: <i><%= post.body %></i></h4>
+				<%= post.created_at %>
 				<h4 class="twit"><%= post.title %></h4>
 				<h4 class="twit"><i><%= post.body %></i></h4>
 				<h5 id="date"><%= post.created_at %></h5>

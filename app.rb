@@ -13,13 +13,18 @@ end
 
 get '/home' do
 	@user = current_user
+
 	@posts = Post.last(10).reverse
 	erb :home
 end
 
 get '/profile/:id' do
 	@user = current_user
-	@posts = Post.all.reverse
+	@posts = Post.where(user_id: @user.id)
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
 	erb :profile
 end
 
@@ -72,6 +77,29 @@ post '/edit_account' do
 	@user = current_user
 	@user.update(fname: params[:fname], lname: params[:lname], username: params[:username], password: params[:password], email: params[:email], birthdate: params[:birthdate])
 	redirect '/account'
+end
+
+def current_user
+	if session[:user_id]
+		@current_user = User.find(session[:user_id])
+	end
+end
+
+post '/twit' do
+	@posts = Post.new(title: params[:title], body: params[:text], user_id: current_user.id)
+	@posts.save
+	redirect '/home'
+end
+
+post '/delete' do
+	@user = current_user
+	@user.delete
+	session.clear
+	redirect '/'
+end
+
+get '/error' do
+	erb :'error'
 end
 
 def current_user
