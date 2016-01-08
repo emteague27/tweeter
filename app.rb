@@ -33,7 +33,7 @@ get '/new-post' do
 end
 
 get '/following' do
-	@user = 
+	@user = current_user
 	erb :following
 end
 
