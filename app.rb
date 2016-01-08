@@ -21,7 +21,10 @@ end
 get '/profile/:id' do
 	@user = current_user
 	@posts = Post.where(user_id: @user.id)
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 	erb :profile
 end
 
