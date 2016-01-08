@@ -19,11 +19,8 @@ end
 
 get '/profile/:id' do
 	@user = current_user
-<<<<<<< HEAD
 	@posts = Post.where(user_id: @user.id)
-=======
 	@posts = Post.all.reverse
->>>>>>> 1d49ab539bf7b4f5a10421f5fc3744dd91c33c79
 	erb :profile
 end
 
