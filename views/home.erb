@@ -1,1 +1,27 @@
-<h1>this is home</h1>
+<h1 id="home">Welcome, <%= @user.fname %>!</h1>
+
+<div id="right_column">
+	<div id="profile_photo">
+		<img src="images/default-profile-pic.png" width="200" height="300">
+
+	</div>
+	<div id="link_box">
+		<a href="/account" class="link_box">Account Settings</a>
+		<a href="/following" class="link_box">Following</a>	
+		<a href="/new-post">Create a New Twit</a>
+	</div>
+</div>
+<div id="left_column">
+	<h1 id="live_feed">Live Feed</h1>
+	<div id="feed_box">
+		<% @posts.each do |post| %>
+			<div id="userposts">
+				<h3 id="username"><%= post.user.username %></h3>
+				<h4>Title: <i><%= post.title %></i></h4>
+				<h4>Body: <i><%= post.body %></i></h4>
+				<%= post.created_at %>
+			</div>
+			<br>
+		<% end %>
+	</div>
+</div>
