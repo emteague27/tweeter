@@ -19,22 +19,17 @@ end
 
 get '/profile/:id' do
 	@user = current_user
-	@posts = Post.where(user_id: @user.id)
-	@posts = Post.all.reverse
+	@posts = Post.where(user_id: @user.id).reverse
 	erb :profile
 end
 
 get '/account' do
+	@user = current_user
 	erb :account
 end
 
 get '/new-post' do
 	erb :'new-post'
-end
-
-get '/following' do
-	@user = current_user
-	erb :following
 end
 
 get '/edit_account' do
@@ -100,4 +95,14 @@ get '/error' do
 	erb :'error'
 end
 
-$posts_per_page = 10
+get '/delete-post' do
+	@user = current_user
+	@posts = Post.where(user_id: @user.id).reverse
+	erb :'delete-post'
+end
+
+post '/delete-post/:id' do
+	@post = Post.find(params[:id])
+	@post.delete
+	redirect '/home'	
+end

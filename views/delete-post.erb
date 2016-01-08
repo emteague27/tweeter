@@ -1,0 +1,16 @@
+<h1>Delete a Twit here</h1>
+
+<div id="feed_box">
+		<% @posts.each do |post| %>
+			<div id="userposts">
+				<h3 id="username"><%= post.user.username %></h3>
+				<h4>Title: <i><%= post.title %></i></h4>
+				<h4>Body: <i><%= post.body %></i></h4>
+				<%= post.created_at %>
+				<form method="POST" action="/delete-post/<%= post.id %>">
+					<input type="submit" value="delete">
+				</form>
+			</div>
+			<br>
+		<% end %>
+	</div>
