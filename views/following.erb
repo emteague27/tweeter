@@ -1,11 +1,15 @@
-<h1>This is following</h1>
+<h1>You are following:</h1>
+
+<div id="outer_box">
+	<% @users.each do |users| %>
+		<div id="follow_box">
+		<%= users.username %>
+		</div>
+	<% end %>
+</div>
 
 
-<% @user each do |user| %>
-	<div id="user_box">
-		<h1><%= User.username %><h1>
-	</div>
-<% end %>
+
 
 
 
