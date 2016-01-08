@@ -19,6 +19,7 @@ end
 
 get '/profile/:id' do
 	@user = current_user
+	@posts = Post.where(user_id: @user.id)
 	@posts = Post.all.reverse
 	erb :profile
 end
