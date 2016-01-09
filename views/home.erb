@@ -10,6 +10,14 @@
 		<a href="/new-post">Create a New Twit</a><br>
 		<a href="/delete-post">Delete a Twit</a>
 	</div>
+	<div id="followers">
+		<h3>Followers:</h3>
+		<% @users.each do |users| %>
+		<ul>
+			<li><a href="/profile/<%= users.id %>"><%= users.username %></a></li>
+		</ul>
+		<% end %>
+	</div>
 </div>
 <div id="left_column">
 	<h1 id="live_feed">Live Feed</h1>

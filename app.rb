@@ -13,13 +13,14 @@ end
 
 get '/home' do
 	@user = current_user
+	@users = User.all
 	@posts = Post.last(10).reverse
 	erb :home
 end
 
 get '/profile/:id' do
-	@user = current_user
-	@posts = Post.where(user_id: @user.id).reverse
+	@user = User.find(params[:id])
+	@posts = Post.where(user_id: @user).reverse
 	erb :profile
 end
 
@@ -92,7 +93,7 @@ post '/delete' do
 end
 
 get '/error' do
-	erb :'error'
+	erb :error, layout: false
 end
 
 get '/delete-post' do
