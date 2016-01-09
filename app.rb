@@ -13,8 +13,8 @@ end
 
 get '/home' do
 	@user = current_user
-	@users = User.all
-	@posts = Post.last(10).reverse
+	@followers = User.all
+	@posts = Post.all.reverse
 	erb :home
 end
 
@@ -30,6 +30,7 @@ get '/account' do
 end
 
 get '/new-post' do
+	@user = current_user
 	erb :'new-post'
 end
 
@@ -78,7 +79,7 @@ def current_user
 end
 
 post '/twit' do
-	@posts = Post.new(title: params[:title], body: params[:text], user_id: current_user.id)
+	@posts = Post.new(title: params[:title], body: params[:text], user_id: current_user.id, username: current_user.username)
 	if !@posts.save
 		flash[:notice] = "Your Twit is too long. Please limit your opinions to 150 characters or less."
 	end

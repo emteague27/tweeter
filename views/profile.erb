@@ -14,7 +14,7 @@
 	</div>
 </div>
 <div id="left_column">
-	<h1 id="live_feed">My Posts</h1>
+	<h1 id="live_feed"><%= @user.fname %>'s Posts</h1>
 	<div id="feed_box">
 		<% @posts.each do |post| %>
 			<div id="userposts">

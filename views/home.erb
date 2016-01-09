@@ -12,9 +12,9 @@
 	</div>
 	<div id="followers">
 		<h3>Followers:</h3>
-		<% @users.each do |users| %>
+		<% @followers.each do |followers| %>
 		<ul>
-			<li><a href="/profile/<%= users.id %>"><%= users.username %></a></li>
+			<li><a href="/profile/<%= followers.id %>"><%= followers.username %></a></li>
 		</ul>
 		<% end %>
 	</div>
@@ -24,7 +24,7 @@
 	<div id="feed_box">
 		<% @posts.each do |post| %>
 			<div id="userposts">
-				<h3 id="username"><%= post.user.username %></h3>
+				<h3 id="username"><%= post.username %></h3>
 				<h4 class="twit"><%= post.title %></h4>
 				<h4 class="twit"><i><%= post.body %></i></h4>
 				<h5 id="date"><%= post.created_at %></h5>
