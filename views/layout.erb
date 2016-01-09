@@ -7,7 +7,7 @@
 	<nav>
 		<ul>
 			<li class="navlist"><a href="/home" class="navbar">Home</a></li>
-			<li class="navlist"><a href="/profile/:id" class="navbar">My Profile</a></li>
+			<li class="navlist"><a href="/profile/<%= current_user.id %>" class="navbar">My Profile</a></li>
 			<li class="navlist"><a href="/logout" class="navbar">Logout</a></li>
 		</ul>
 	</nav>
