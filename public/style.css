@@ -179,6 +179,16 @@ h2{
 	font-size: 30px;
 }
 
+#twit{
+color: #3E5AF9;
+	text-shadow: 1px 1px white,
+		1px -1px white,
+		-1px 1px white,
+		-1px -1px white;
+	font-family: Lobster, sans-serif;
+	font-size: 40px;
+}
+
 #post{
 	margin: 22px;
 	width: 300px;
@@ -202,3 +212,14 @@ input.title{
 	width: 400px;
 }
 
+/*delete-post page*/
+
+#delete{
+	color: #3E5AF9;
+	text-shadow: 1px 1px white,
+		1px -1px white,
+		-1px 1px white,
+		-1px -1px white;
+	font-family: Lobster, sans-serif;
+	font-size: 40px;
+}
